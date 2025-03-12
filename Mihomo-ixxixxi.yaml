@@ -1,18 +1,3 @@
-#==========================================
-# @ConfigName        墨鱼自用MihomoParty配置文件
-# @Author            @ddgksf2013
-# @TgChannel         https://t.me/ddgksf2021
-# @WechatID          墨鱼手记
-# @Feedback          💡请通过邮件反馈问题[其它方式一概无视]：𝐝𝐝𝐠𝐤𝐬𝐟𝟐𝟎𝟏𝟑@𝟏𝟔𝟑.𝐜𝐨𝐦 💡
-# @UpdateTime        2025/02/17 18:28 UTC/GMT +8
-# @Function          支持手动选择、自动测速、广告屏蔽、Final、按国家分组节点、策略图标等  
-# @mihomo-party      https://github.com/mihomo-party-org/mihomo-party/releases
-# @howtouse          主界面添加本配置[覆写]，然后使用内置的[SubStore]添加机场，之后去[订阅管理]，在配置的[编辑信息]中绑定机场订阅，开启系统代理即可使用
-# @Thanks            @blackmatrix7, @Fndroid, @Anti, @Orz-3, @Koolson, @soffchen, @ACL4SSR, @Cats-Team
-# @ConfigVersion     1.0.18
-# @ConfigUrl         https://github.com/ddgksf2013/Profile/raw/master/MihomoParty.yaml
-#==========================================
-
 proxy-groups:
 #节点分组
   - {name: 优选, type: url-test, include-all: true, interval: 600, tolerance: 50,  icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available_Alt.png }
@@ -32,7 +17,7 @@ proxy-groups:
   - {name: Microsoft, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png }
   - {name: Github, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/ixxixxi/icons/11828cbb52ace1164aca8ea98b009b3faf8b7144/Github.png }
   - {name: Telegram, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram_X.png }
-  - {name: AdBlock,  type: select, proxies: [REJECT, DIRECT], icon: https://ghfast.top/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Adblock.png }
+  - {name: NoAd,  type: select, proxies: [REJECT, DIRECT], icon: https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Advertising.png }
   - {name: Final, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://ghfast.top/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
 
 # 分流规则 
@@ -45,7 +30,7 @@ rule-providers:
   Github:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml ,                      path: ./ruleset/Github.yaml       }
   Microsoft:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml ,                path: ./ruleset/Microsoft.yaml    }
   Google:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml ,                      path: ./ruleset/Google.yaml       }
-  Speedtest:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Speedtest/Speedtest.list       }
+  Speedtest:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://github.com/blackmatrix7/ios_rule_script/raw/master/rule/Loon/Speedtest/Speedtest.list       }
   Telegram:    {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml ,                  path: ./ruleset/Telegram.yaml     }
   ProxyLite:   {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ProxyLite/ProxyLite.yaml ,                path: ./ruleset/ProxyLite.yaml    }
   Direct:      {behavior: classical, interval: 86400, format: yaml, type: http, url: https://ghfast.top/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.yaml ,                      path: ./ruleset/Direct.yaml       }
@@ -55,7 +40,7 @@ rule-providers:
 
 # 分流Policy 
 rules:
-  - RULE-SET,AdBlock,AdBlock
+  - RULE-SET,AdBlock,NoAd
   - RULE-SET,OpenAi,OpenAi
   - RULE-SET,Apple,Apple
   - RULE-SET,Github,Github
