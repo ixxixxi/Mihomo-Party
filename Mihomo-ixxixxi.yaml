@@ -10,15 +10,15 @@ proxy-groups:
   - {name: 其它, type: url-test, include-all: true, interval: 600, tolerance: 50,  filter: "^((?!(中国|国内|大陆|香|台|日|apan|韩|新|美|🇨🇳|🇭🇰|🇺🇸|🇸🇬|🇰🇷|🇯🇵|🇹🇼|KR|SG|JP|TW|HK|CN|CH|China|Hong|TaiWan|States|American|Japan|Singapore|Korea|洛|西雅|拉|加|谷|勒|凤|费|圣|芬|东|埼)).)*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Global.png }
 
 #分流分组
-  - {name: Apple, type: select, proxies: [DIRECT, 自选, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png }
-  - {name: OpenAi,   type: select, proxies: [美国, 自选], icon: https://raw.githubusercontent.com/ixxixxi/icons/32753342a3c4bb076f9eff51cbb3453f6518c567/ChatGPT.png }
-  - {name: Google, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Google.png }
-  - {name: Speedtest, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Speedtest.png }
-  - {name: Microsoft, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png }
-  - {name: Github, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/ixxixxi/icons/11828cbb52ace1164aca8ea98b009b3faf8b7144/Github.png }
-  - {name: Telegram, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram_X.png }
-  - {name: NoAd,  type: select, proxies: [REJECT, DIRECT], icon: https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Advertising.png }
-  - {name: Final, type: select, proxies: [自选, DIRECT, 优选, 香港, 日本, 台湾, 美国, 狮城], icon: https://ghfast.top/https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png }
+  - {name: Apple, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png }
+  - {name: OpenAi,   type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/ixxixxi/icons/32753342a3c4bb076f9eff51cbb3453f6518c567/ChatGPT.png }
+  - {name: Google, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Google.png }
+  - {name: Speedtest, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Speedtest.png }
+  - {name: Microsoft, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Microsoft.png }
+  - {name: Github, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/ixxixxi/icons/11828cbb52ace1164aca8ea98b009b3faf8b7144/Github.png }
+  - {name: Telegram, type: select, proxies: [优选, 自选, 香港, 日本, 台湾, 美国, 狮城, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram_X.png }
+  - {name: NoAd,  type: select, proxies: [REJECT, DIRECT, 优选], icon: https://ghfast.top/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Advertising.png }
+  - {name: Final, type: select, proxies: [优选, 自选, DIRECT], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/aaex.png }
 
 # 分流规则 
 rule-providers:
